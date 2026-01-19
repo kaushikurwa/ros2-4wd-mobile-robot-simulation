@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project presents a ROS2 4-Wheel-Drive Mobile Robot Simulated in Gazebo and visualized in RViz.  
+A ROS2 4-Wheel-Drive Mobile Robot Simulated in Gazebo and visualized in RViz.  
 This robot integrates LiDAR and RGB camera sensors and supports teleoperation, providing a complete baseline for mobile robot perception, motion, and system bringup.
 
 The project focuses on:
@@ -12,7 +12,14 @@ The project focuses on:
 - **Simulation-first validation** using Gazebo and RViz
 
 ---
+## System Requirements
 
+- Ubuntu 22.04
+- ROS 2 Humble
+- Gazebo 11
+- Python 3.10+
+
+---
 ## Features
 
 - **4WD Differential Drive Robot:** Realistic wheel-based motion model  
@@ -33,34 +40,23 @@ The project focuses on:
    Gazebo world, controllers, and plugins are launched through ROS2 launch files.
 
 3. **Sensor Data Flow:**  
-   LiDAR and camera plugins publish sensor topics in real time.
+   LiDAR `/laser_scan` and camera plugins publish sensor topics in real time.
 
 4. **Visualization & Control:**  
    RViz displays TF, LaserScan, and robot state while teleop sends `/cmd_vel`.
 
 ---
 
-## Tech Stack
-
-- **Framework:** ROS 2 (Humble)
-- **Simulation:** Gazebo Classic
-- **Visualization:** RViz2
-- **Robot Modeling:** URDF / Xacro
-- **Control:** Differential drive controller
-- **Sensors:** LiDAR, RGB Camera
-
----
-
 ## Repository Structure
 
-ros2-4wd-mobile-robot/
+```
+4wd_ws/
 ├── src/
-│ ├── my_robot_description # URDF, Xacro, RViz configs
-│ └── my_robot_bringup # Gazebo world, controllers, launch files
+│ ├── my_robot_description          # URDF, Xacro, RViz configs
+│ └── my_robot_bringup              # Gazebo world, controllers, launch files
 ├── screenshots/
 └── README.md
-
-
+```
 ---
 
 ## Visuals
@@ -79,19 +75,31 @@ ros2-4wd-mobile-robot/
 
 ---
 
-## Demo Video
-
-**Screen recording of robot simulation and sensor visualization**
-
-[Click here to watch the demo video](https://github.com/kaushikurwa/ros2-4wd-mobile-robot-simulation/assets/YOUR_VIDEO_ID)
-
----
-
 ## How to Run
 
 1. Clone the repository
    ```bash
    git clone https://github.com/kaushikurwa/ros2-4wd-mobile-robot-simulation.git
+
+## Dependencies
+
+### Core Dependencies
+## Building the Project
+
+```bash
+cd ~/dev_Ws
+colcon build
+source install/setup.bash
+```
+## Configuration
+
+### Lidar Parameters
+
+Edit `src/my_robot_description/urdf/lidar_sensor.xacro` to modify:
+- Scan range (min/max)
+- Update rate
+- Sample count
+- Visualization settings
 
 ## Future Work
 
@@ -99,3 +107,18 @@ ros2-4wd-mobile-robot/
 - Add SLAM (RTAB-Map / SLAM Toolbox)
 - Implement waypoint-based navigation
 - Extend simulation to real hardware deployment
+
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit issues and pull requests.
+
+## Author
+
+kaushikurwa
+
+## Acknowledgments
+
+- ROS 2 community
+- Gazebo simulation platform
+
