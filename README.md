@@ -87,7 +87,7 @@ The project focuses on:
 ## Building the Project
 
 ```bash
-cd ~/dev_Ws
+cd ~/4wd_ws
 colcon build
 source install/setup.bash
 ```
