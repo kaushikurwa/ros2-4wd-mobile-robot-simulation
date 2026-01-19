@@ -70,11 +70,11 @@ ros2-4wd-mobile-robot/
 </p>
 
 <p align="center">
-  <img src="screenshots/rviz.png" width="500">
+  <img src="screenshots/Screenshot from 2026-01-19 20-25-30.png" width="500">
 </p>
 
 <p align="center">
-  <img src="screenshots/terminal.png" width="500">
+  <img src="screenshots/Screenshot from 2026-01-19 20-27-47.png" width="500">
 </p>
 
 ---
