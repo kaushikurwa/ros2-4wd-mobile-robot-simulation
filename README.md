@@ -66,7 +66,7 @@ ros2-4wd-mobile-robot/
 ## Visuals
 
 <p align="center">
-  <img src="screenshots/gazebo.png" width="500">
+  <img src="screenshots/Screenshot from 2026-01-19 20-25-14.png" width="500">
 </p>
 
 <p align="center">
