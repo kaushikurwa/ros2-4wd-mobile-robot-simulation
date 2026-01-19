@@ -23,7 +23,7 @@ The project focuses on:
 ## Features
 
 - **4WD Differential Drive Robot:** Realistic wheel-based motion model  
-- **LiDAR Sensor Integration:** Publishes `/scan` data for perception and mapping  
+- **LiDAR Sensor Integration:** Publishes `/laser_scan` data for perception and mapping  
 - **RGB Camera Sensor:** Streams image data for vision-based tasks  
 - **Gazebo Simulation:** Physics-based environment for testing robot behavior  
 - **RViz Visualization:** TF tree, robot model, laser scan, and sensor data  
@@ -40,7 +40,7 @@ The project focuses on:
    Gazebo world, controllers, and plugins are launched through ROS2 launch files.
 
 3. **Sensor Data Flow:**  
-   LiDAR `/laser_scan` and camera plugins publish sensor topics in real time.
+   LiDAR and camera plugins publish sensor topics in real time.
 
 4. **Visualization & Control:**  
    RViz displays TF, LaserScan, and robot state while teleop sends `/cmd_vel`.
